@@ -1,0 +1,31 @@
+package proxy.example1;
+
+/**
+ * @author yu
+ *游戏者
+ */
+public class GamePlayer implements IGamePlayer{
+	
+	private String name="";
+	
+	//通过构造函数传递名称
+	public GamePlayer(String _name){
+		this.name = _name;
+	}
+	
+	//打怪，最期望的就是杀老怪
+	public void killBoss(){
+		System.out.println(this.name+" 在打怪！");
+	}
+	
+	//进入游戏之前肯定得登录吧，这是一个必要条件
+	public void login(String user,String password){
+		System.out.println("登录名为：" + user +"的用户"  + this.name + " 登录成功！");
+	}
+	
+	//升级，升级的方法有很多，花钱是一种，做任务也是一种。
+	public void upgrade(){
+		System.out.println(this.name + " 又升了一级。");
+	}
+	
+}
